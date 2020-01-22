@@ -1,0 +1,56 @@
+body,
+p {
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.25;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bangers', cursive;
+}
+
+.header {
+    grid-area: hd;
+}
+
+.main {
+    grid-area: main;
+}
+
+.side-bar {
+    grid-area: sb;
+}
+
+footer {
+    grid-area: ft;
+}
+
+@media screen and (max-width:599px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "hd hd" "sb sb" "main main" "ft ft";
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "hd hd hd hd" "main main main sb" "ft ft ft ft";
+        padding: 10px;
+    }
+}
+
+.box {
+    border: 1px solid purple;
+    background: sandybrown;
+    color: black;
+    padding: 1rem;
+}
