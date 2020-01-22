@@ -1,6 +1,6 @@
 body,
 p {
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.25;
 }
@@ -18,6 +18,10 @@ h6 {
     grid-area: hd;
 }
 
+.navbar {
+    grid-area: nb;
+}
+
 .main {
     grid-area: main;
 }
@@ -30,27 +34,45 @@ footer {
     grid-area: ft;
 }
 
+.wrapper {
+    display: grid;
+    grid-gap: 2px;
+}
+
 @media screen and (max-width:599px) {
     .wrapper {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "hd hd" "sb sb" "main main" "ft ft";
+        grid-template-areas: "hd nb" "sb sb" "main main" "ft ft";
         padding: 5px;
     }
 }
 
 @media screen and (min-width:600px) {
     .wrapper {
-        display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: "hd hd hd hd" "main main main sb" "ft ft ft ft";
+        grid-template-rows: 15% 1fr 10%;
+        grid-template-areas: "hd hd nb nb" "main main main sb" "ft ft ft ft";
         padding: 10px;
     }
 }
 
 .box {
+    display: flex;
     border: 1px solid purple;
     background: sandybrown;
     color: black;
     padding: 1rem;
+}
+
+.noflex {
+    display: block;
+}
+
+hr {
+    color: black;
+    border: 2px solid purple;
+}
+
+.text-right {
+    text-align: right;
 }
