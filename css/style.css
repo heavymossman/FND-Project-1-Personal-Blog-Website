@@ -37,12 +37,13 @@ footer {
 .wrapper {
     display: grid;
     grid-gap: 2px;
+    grid-template-rows: minmax(10vh, auto);
 }
 
 @media screen and (max-width:599px) {
     .wrapper {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "hd nb" "sb sb" "main main" "ft ft";
+        grid-template-columns: 1fr;
+        grid-template-areas: "hd" "nb" "sb" "main" "ft";
         padding: 5px;
     }
 }
@@ -50,8 +51,7 @@ footer {
 @media screen and (min-width:600px) {
     .wrapper {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 15% 1fr 10%;
-        grid-template-areas: "hd hd nb nb" "main main main sb" "ft ft ft ft";
+        grid-template-areas: "hd hd hd nb" "main main main sb" "ft ft ft ft";
         padding: 10px;
     }
 }
@@ -75,4 +75,9 @@ hr {
 
 .text-right {
     text-align: right;
+}
+
+.text-center {
+    text-align: center;
+    justify-content: center;
 }
